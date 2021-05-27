@@ -1,0 +1,21 @@
+{%extends "base.html"%}
+
+{%block content%}
+<div class="box">
+  <h1>Login</h1>
+  <form action="/login" method="POST" accept-charset="utf-8">
+    <div class="field">
+      <label class="label" for="username">Username: </label>
+    <input class="input" type="email" name="email" id="email" value="" />
+    </div>
+    <div class="field">
+      <label class="label" for="password">Password: </label>
+      <input class="input" type="password" name="password" id="password" value="" />
+      </div>
+      <input type="checkbox" name="remember_me" id="remember_me" />
+      <label for="remember_me">Lembrar</label> <br />
+      <button class="button is-link mt-5" type="submit">Enviar</button>
+    </form>
+    
+</div>
+{%endblock%}

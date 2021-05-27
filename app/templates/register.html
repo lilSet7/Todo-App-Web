@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{%block content%}
+  <div class="box">
+    <h1 class="title">Registre-se</h1>
+    <form action="/register" method="POST" accept-charset="utf-8">
+      <div class="field">
+        <label class="label" for="name">Nome:</label>
+        <input class="input" type="text" name="name" id="name" value="" />
+         </div>
+       <div class="field">
+          <label class="label" for="email">Email:</label>
+          <input class="input" type="email" name="email" id="email" value="" />
+         </div>
+         <div class="field">
+            <label class="label" for="password">Password: </label>
+            <input class="input" type="password" name="password" id="password" value="" />
+         </div>
+         <div class="field">
+            <label class="label" for="password2">Repita O Password: </label>
+            <input class="input" type="password" name="password2" id="password2" value="" />
+         </div>
+         <button class="button is-link" id="submit" type="submit">Enviar</button>
+    </form>
+    
+  </div>
+{%endblock%}

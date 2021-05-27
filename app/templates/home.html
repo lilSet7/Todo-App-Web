@@ -1,0 +1,36 @@
+{%extends "base.html"%}
+{%block content %}
+  <h1 class="title">Todo-App</h1>
+  <p class="subtitle">Adcione lembrete para você lembra e não esquecer</p>
+  <div class="box">
+    <form action="./add" method="POST" accept-charset="utf-8">
+      
+    
+    <div class="field">
+    <label class='label' for="title">Titulo</label><br />
+    <div class="control">
+    <input class="input" type="text" name="title" id="title" value="" />
+    </div>
+    </div>
+    <div class="field">
+    <label class="label" for="message">message</label>
+    <input class="input" type="text" name="message" id="message" value="" />
+    </div>
+     <button class="button is-link mb-5" stype="submit">Salva</button>
+    </form>
+    {%for todo in todo_list%}
+    <div class="box">
+    <p class="title">{{todo.id}}| {{todo.title}}</p><br />
+    <p class="subtitle">{{todo.message}}</p>
+   {% if todo.complete == False %}
+    <span class="mb-2">Não concluído</span> <br />
+    {%else%}
+    <span class="mb-2">Concluído</span> <br />
+    {%endif%}
+    <button class="button is-link"> <a class="has-text-dark"href="./update/{{todo.id}}">Terminar</a></button>
+    <button class="button is-danger" ><a class="has-text-dark"href="./delete/{{todo.id}}">Excluir</a></button>
+    </div>
+    {%endfor%}
+    
+  </div>
+{%endblock%}
