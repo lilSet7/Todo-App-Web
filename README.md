@@ -8,6 +8,13 @@
 - Bulma Framework Css 
 *****
 ### Modo de Uso:
+em primeiro lugar instale adependências usando o pip 
+```
+   pip install flask
+   pip install flask_login
+   pip install flask_migrate
+   pip install flask_sqlalchemy
+```
 
 
  
